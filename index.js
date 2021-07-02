@@ -1,7 +1,11 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
-require('dotenv').config()
+try {
+  require('dotenv').config()
+} catch (e) { 
+  console.log("SKIP env")
+}
 
 try {
   // `who-to-greet` input defined in action metadata file
