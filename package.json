@@ -13,5 +13,8 @@
     "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
   }
 }

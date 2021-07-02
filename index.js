@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
+require('dotenv').config()
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -9,11 +10,11 @@ try {
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   const ASANA_PAT = process.env.ASANA_PAT;
+  console.log("ASANA_PAT: ", ASANA_PAT)
   // fetch github.com/
   fetch("https://app.asana.com/api/1.0/stories/1200095260727289", {
     "method": "GET",
     "headers": {
-      "user-agent": "vscode-restclient",
       "accept": "application/json",
       "authorization": `Bearer ${ASANA_PAT}`
     }
