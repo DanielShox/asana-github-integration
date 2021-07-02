@@ -23,7 +23,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Runs a set of commands using the runners shell
       - name: Asana Test
-        uses: DanielShox/asana-github-integration@v1.1
+        uses: DanielShox/asana-github-integration@v1.2
         env:
           CI: true
           ASANA_PAT: ${{ secrets.ASANA_PAT }}
