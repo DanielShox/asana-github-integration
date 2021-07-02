@@ -1,3 +1,4 @@
 pull_asana_project.http
 asana-api.http
 .env
+node_modules
